@@ -59,6 +59,7 @@ export const SidebarData1 = [
         />
       </svg>
     ),
+    path: "/",
   },
 ];
 
@@ -81,6 +82,7 @@ export const SidebarData2 = [
         />
       </svg>
     ),
+    path: "/",
   },
   {
     title: "Documentation",
@@ -100,6 +102,7 @@ export const SidebarData2 = [
         />
       </svg>
     ),
+    path: "grades",
   },
   {
     title: "Help",
@@ -119,5 +122,6 @@ export const SidebarData2 = [
         />
       </svg>
     ),
+    path: "/",
   },
 ];

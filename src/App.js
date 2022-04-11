@@ -1,11 +1,22 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+} from "react-router-dom";
 import Layout from "./components/Layout";
-import Sidebar from "./components/Sidebar";
 import Grades from "./pages/Grades";
 function App() {
   return (
-    <Layout>
-      <Grades />
-    </Layout>
+    <Router>
+      <Layout>
+        <Grades />
+      </Layout>
+      <Routes>
+        <Route path="/" element={App} />
+        <Route path="grades" element={Grades} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { SidebarData1, SidebarData2 } from "./SidebarData.js";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -33,17 +34,18 @@ const Sidebar = () => {
       <ul class="space-y-2 border-b pb-4">
         {SidebarData1.map((item, index) => {
           return (
-            <li
-              key={index}
-              class="flex items-center space-x-4 w-full bg-gray-100 h-15 p-4 rounded-lg cursor-pointer ease duration-200"
-              // class={
-              //   router.pathname == item.path
-              //     ? "flex items-center space-x-4 w-full bg-gray-100 h-15 p-4 rounded-lg cursor-pointer ease duration-200"
-              //     : "flex items-center space-x-4 w-full hover:bg-gray-100 h-15 p-4 rounded-lg cursor-pointer ease duration-200"
-              // }
-            >
-              <div>{item.icon}</div>
-              <span>{item.title}</span>
+            <li key={index}>
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  isActive
+                    ? "flex items-center space-x-4 w-full bg-gray-100 h-15 p-4 rounded-lg cursor-pointer ease duration-200"
+                    : "flex items-center space-x-4 w-full hover:bg-gray-100 h-15 p-4 rounded-lg cursor-pointer ease duration-200"
+                }
+              >
+                <div>{item.icon}</div>
+                <span>{item.title}</span>
+              </NavLink>
             </li>
           );
         })}
@@ -51,17 +53,18 @@ const Sidebar = () => {
       <ul class="space-y-2 pt-4 pb-4">
         {SidebarData2.map((item, index) => {
           return (
-            <li
-              key={index}
-              class="flex items-center space-x-4 w-full bg-black h-15 p-4 rounded-lg cursor-pointer ease duration-200"
-              // class={
-              //   router.pathname == item.path
-              //     ? "flex items-center space-x-4 w-full bg-black h-15 p-4 rounded-lg cursor-pointer ease duration-200"
-              //     : "flex items-center space-x-4 w-full hover:bg-gray-100 h-15 p-4 rounded-lg cursor-pointer ease duration-200"
-              // }
-            >
-              <div>{item.icon}</div>
-              <span>{item.title}</span>
+            <li key={index}>
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  isActive
+                    ? "flex items-center space-x-4 w-full bg-gray-100 h-15 p-4 rounded-lg cursor-pointer ease duration-200"
+                    : "flex items-center space-x-4 w-full hover:bg-gray-100 h-15 p-4 rounded-lg cursor-pointer ease duration-200"
+                }
+              >
+                <div>{item.icon}</div>
+                <span>{item.title}</span>
+              </NavLink>
             </li>
           );
         })}
