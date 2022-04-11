@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+svg {
+    height: 20px;
+    width: 20px;
+}
