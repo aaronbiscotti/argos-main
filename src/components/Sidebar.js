@@ -35,7 +35,7 @@ const Sidebar = () => {
           return (
             <li
               key={index}
-              class="flex items-center space-x-4 w-full bg-gray-100 h-15 p-4 rounded-lg cursor-pointer ease duration-200"
+              class={"flex items-center space-x-4 w-full bg-gray-100 h-15 p-4 rounded-lg cursor-pointer ease duration-200"}
               // class={
               //   router.pathname == item.path
               //     ? "flex items-center space-x-4 w-full bg-gray-100 h-15 p-4 rounded-lg cursor-pointer ease duration-200"
